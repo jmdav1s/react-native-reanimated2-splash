@@ -1,7 +1,7 @@
 import React from 'react';
-import * as SplashScreen from "expo-splash-screen";
-import {AnimatedAppLoader} from './src/AnimatedAppLoader';
-import {MainScreen} from './src/MainScreen';
+import * as SplashScreen from 'expo-splash-screen';
+import { AnimatedAppLoader } from './src/AnimatedAppLoader';
+import { MainScreen } from './src/MainScreen';
 
 // Instruct SplashScreen not to hide
 SplashScreen.preventAutoHideAsync().catch(() => {

@@ -1,10 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {StatusBar} from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
-interface MainScreenPropType {
-
-}
+interface MainScreenPropType {}
 
 export const MainScreen = (props: MainScreenPropType) => {
   return (
@@ -21,14 +19,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   heading: {
     fontFamily: 'Roboto-Bold',
-    fontSize: 36,
+    fontSize: 36
   },
   subHeading: {
     fontFamily: 'Roboto-Regular',
-    fontSize: 26,
+    fontSize: 26
   }
 });

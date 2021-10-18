@@ -1,13 +1,6 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-  Easing,
-  withDelay,
-  runOnJS
-} from 'react-native-reanimated';
-import {StyleSheet, Image} from 'react-native';
+import React, { useEffect, useMemo, useState } from 'react';
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing, withDelay, runOnJS } from 'react-native-reanimated';
+import { StyleSheet, Image } from 'react-native';
 import Constants from 'expo-constants';
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -17,7 +10,7 @@ interface AnimatedSplashScreenPropType {
 
 import splashImage from '../assets/splash.png';
 
-export const AnimatedSplashScreen = ({children}: AnimatedSplashScreenPropType) => {
+export const AnimatedSplashScreen = ({ children }: AnimatedSplashScreenPropType) => {
   const [isSplashReady, setIsSplashReady] = useState(false);
   const [isSplashAnimationComplete, setIsSplashAnimationComplete] = useState(false);
   // Shared value between JS and UI thread
@@ -75,7 +68,7 @@ export const AnimatedSplashScreen = ({children}: AnimatedSplashScreenPropType) =
       {isSplashReady && children}
       {!isSplashAnimationComplete && (
         <Animated.View
-          style={[StyleSheet.absoluteFill, {backgroundColor: Constants.manifest?.splash?.backgroundColor || 'white'}, animatedStyle]}>
+          style={[StyleSheet.absoluteFill, { backgroundColor: Constants.manifest?.splash?.backgroundColor || 'white' }, animatedStyle]}>
           <Image
             source={splashImage}
             // this prop is required for Android otherwise it will fade in our icon and
